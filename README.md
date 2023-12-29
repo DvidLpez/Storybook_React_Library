@@ -16,7 +16,7 @@ Storybook with react components to create a new library
 ## :gear: Installation
 ``` bash
 # Install dev-dependencies and dependencies
-yarn install
+npm run install
 ```
 
 ## :eyes: How to usage
@@ -24,24 +24,24 @@ yarn install
 ### Start Storybook
 ``` bash
 # Use this command to start storybook in localhost for watch components
-yarn storybook
+npm run storybook
 ```
 ### Build storybook
 ``` bash
 # Use this command to build a new static content with storybook
-yarn build-storybook
+npm run build-storybook
 ```
 
 ### Pre Build library
 ``` bash
 # Use this command to pre build fonts and icons
-yarn prebuild-library
+npm run prebuild-library
 ```
 
 ### Build library
 ``` bash
 # Use this command to build a new library
-yarn build-library
+npm run build-library
 ```
 
 ## :couple: Authors

@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins-thin';
     src: url('./Poppins-Thin.ttf') format("truetype");
     font-weight: 200;
     font-style: normal;
@@ -17,24 +17,24 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins-medium';
     src: url('./Poppins-Medium.ttf') format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins-semibold';
     src: url('./Poppins-SemiBold.ttf') format("truetype");
     font-weight: 600;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins-bold';
     src: url('./Poppins-Bold.ttf') format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 
 *{
-    font-family: 'Poppins-light';
+    font-family: 'Poppins';
 }

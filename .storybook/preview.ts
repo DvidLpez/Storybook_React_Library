@@ -1,6 +1,11 @@
 import type { Preview } from "@storybook/react";
-import "primereact/resources/themes/lara-light-cyan/theme.css";
-import '../lib/config/fonts/styles.css';
+import { withThemeFromJSXProvider } from '@storybook/addon-themes';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from '../src/config/global.styles';
+import { lightTheme } from '../src/config/themes/light';
+import { darkTheme } from '../src/config/themes/dark';
+
+// import '../lib/config/fonts/styles.css';
 const preview: Preview = {
   parameters: {
     actions: { 
@@ -14,5 +19,17 @@ const preview: Preview = {
     },
   },
 };
+
+export const decorators = [
+  withThemeFromJSXProvider({
+    themes: {
+      light: lightTheme,
+      dark: darkTheme
+    },
+    defaultTheme: "light",
+    Provider: ThemeProvider, 
+    GlobalStyles: GlobalStyles,
+  }),
+];
 
 export default preview;
