@@ -1,15 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export interface StyledProps {
   severity?:
-    | "primary"
-    | "secondary"
-    | "success"
-    | "info"
-    | "warning"
-    | "danger"
-    | "black";
-  size?: "small" | "medium" | "large";
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'info'
+    | 'warning'
+    | 'danger'
+    | 'black';
+  size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
   rounded?: boolean;
   label?: string;
@@ -18,20 +18,20 @@ export interface StyledProps {
 
 export const StyledButton = styled.button<StyledProps>`
   border: 0px;
-  border-radius: ${(pr) => (pr.rounded ? "50px" : "5px")};
-  color: ${(props) =>  props.theme.palette.white};
+  border-radius: ${(pr) => (pr.rounded ? '50px' : '5px')};
+  color: ${(props) => props.theme.palette.white};
   position: relative;
-  
+
   &:before {
-      content: "${(props) => props.label}";
+    content: '${(props) => props.label}';
   }
 
   &:hover {
-    cursor: ${(pr) => (pr.disabled ? "not-allowed" : "pointer")};
+    cursor: ${(pr) => (pr.disabled ? 'not-allowed' : 'pointer')};
   }
 
   ${(props) => {
-    if(props.badge){
+    if (props.badge) {
       return `
       &:after {
         border-radius: 8px;
@@ -54,17 +54,17 @@ export const StyledButton = styled.button<StyledProps>`
 
   ${(props) => {
     switch (props.size) {
-      case "small":
+      case 'small':
         return `
           font-size: 0.9em;
           padding: 4px 10px;
         `;
-      case "medium":
+      case 'medium':
         return `
           font-size: 1em;
           padding: 4px 10px;
         `;
-      case "large":
+      case 'large':
         return `
           font-size: 1.2em;
           padding: 5px 10px;
@@ -79,7 +79,7 @@ export const StyledButton = styled.button<StyledProps>`
 
   ${(props) => {
     switch (props.severity) {
-      case "primary":
+      case 'primary':
         return `
           background-color: ${props.theme.primary};
           &:hover {
@@ -89,7 +89,7 @@ export const StyledButton = styled.button<StyledProps>`
               background-color: ${props.theme.light_primary};
           }
         `;
-      case "secondary":
+      case 'secondary':
         return `
           background-color: ${props.theme.palette.grey};
           &:hover {
@@ -99,7 +99,7 @@ export const StyledButton = styled.button<StyledProps>`
               background-color: ${props.theme.palette.light_grey};
           }
         `;
-      case "success":
+      case 'success':
         return `
           background-color: ${props.theme.palette.green};
           &:hover {
@@ -109,7 +109,7 @@ export const StyledButton = styled.button<StyledProps>`
               background-color: ${props.theme.palette.light_green};
           }
         `;
-      case "info":
+      case 'info':
         return `
           background-color: ${props.theme.palette.blue};
           &:hover {
@@ -119,7 +119,7 @@ export const StyledButton = styled.button<StyledProps>`
               background-color: ${props.theme.palette.light_blue};
           }
         `;
-      case "warning":
+      case 'warning':
         return `
           background-color: ${props.theme.palette.orange};
           &:hover {
@@ -129,7 +129,7 @@ export const StyledButton = styled.button<StyledProps>`
               background-color: ${props.theme.palette.light_orange};
           }
         `;
-      case "danger":
+      case 'danger':
         return `
           background-color: ${props.theme.palette.red};
           &:hover {
@@ -139,7 +139,7 @@ export const StyledButton = styled.button<StyledProps>`
               background-color: ${props.theme.palette.light_red};
           }
         `;
-      case "black":
+      case 'black':
         return `
           background-color: ${props.theme.palette.black};
           &:hover {

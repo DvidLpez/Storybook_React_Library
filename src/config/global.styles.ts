@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 import './fonts/styles.css';
 
 export const GlobalStyles = createGlobalStyle`
@@ -7,6 +7,6 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     html, body{
-        background-color: ${pr => pr.theme.background}
+        background-color: ${(pr) => pr.theme.background}
     }
 `;
