@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import {Spinner} from './Spinner';
+import { Spinner } from './Spinner';
 
 const meta: Meta<typeof Spinner> = {
   title: 'Styled/Spinner',
@@ -16,60 +16,60 @@ type Story = StoryObj<typeof Spinner>;
 
 export const Primary: Story = {
   args: {
-    severity: 'primary'
-  }
+    severity: 'primary',
+  },
 };
 
 export const Secondary: Story = {
   args: {
-    severity: 'secondary'
-  }
+    severity: 'secondary',
+  },
 };
 
 export const Info: Story = {
   args: {
-    severity: 'info'
-  }
+    severity: 'info',
+  },
 };
 
 export const Success: Story = {
   args: {
-    severity: 'success'
-  }
+    severity: 'success',
+  },
 };
 
 export const Warning: Story = {
   args: {
-    severity: 'warning'
-  }
+    severity: 'warning',
+  },
 };
 
 export const Danger: Story = {
   args: {
-    severity: 'danger'
-  }
+    severity: 'danger',
+  },
 };
 
 export const Black: Story = {
   args: {
-    severity: 'black'
-  }
+    severity: 'black',
+  },
 };
 
 export const Small: Story = {
   args: {
-    size: 'small'
-  }
+    size: 'small',
+  },
 };
 
 export const Big: Story = {
   args: {
-    size: 'big'
-  }
+    size: 'big',
+  },
 };
 
 export const WithText: Story = {
   args: {
-    text: 'Loading...'
-  }
+    text: 'Loading...',
+  },
 };

@@ -14,14 +14,16 @@ export type SpinnerProps = {
     | 'black';
 };
 
-export const Spinner: React.ForwardRefRenderFunction<HTMLDivElement, SpinnerProps> = ({ text, size, severity }) => {
-
+export const Spinner: React.ForwardRefRenderFunction<
+  HTMLDivElement,
+  SpinnerProps
+> = ({ text, size, severity }) => {
   return (
     <>
-    <StyledSpinnerBox>
-      <StyledSpinner size={size} severity={severity} />  
-      {text}
-    </StyledSpinnerBox>
+      <StyledSpinnerBox>
+        <StyledSpinner size={size} severity={severity} />
+        {text}
+      </StyledSpinnerBox>
     </>
   );
 };
