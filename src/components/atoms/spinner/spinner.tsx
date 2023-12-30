@@ -1,21 +1,27 @@
 import React from 'react';
-import { StyledSpinner } from './styled';
+import { StyledSpinner, StyledSpinnerBox } from './styled';
 
 export type SpinnerProps = {
-  size?: number;
-  className?: string;
-  light?: boolean;
+  text?: string;
+  size?: 'small' | 'medium' | 'big';
+  severity?:
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'info'
+    | 'warning'
+    | 'danger'
+    | 'black';
 };
 
-const Spinner: React.ForwardRefRenderFunction<HTMLDivElement, SpinnerProps> = (
-  props,
-  ref,
-) => {
-  const { className, size = 30, light = false } = props;
+export const Spinner: React.ForwardRefRenderFunction<HTMLDivElement, SpinnerProps> = ({ text, size, severity }) => {
 
   return (
-    <StyledSpinner ref={ref} className={className} size={size} light={light} />
+    <>
+    <StyledSpinnerBox>
+      <StyledSpinner size={size} severity={severity} />  
+      {text}
+    </StyledSpinnerBox>
+    </>
   );
 };
-
-export default React.forwardRef<HTMLDivElement, SpinnerProps>(Spinner);

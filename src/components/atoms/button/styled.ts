@@ -91,12 +91,12 @@ export const StyledButton = styled.button<StyledProps>`
         `;
       case 'secondary':
         return `
-          background-color: ${props.theme.palette.grey};
+          background-color: ${props.theme.palette.secondary};
           &:hover {
-              background-color: ${props.theme.palette.darrk_grey};
+              background-color: ${props.theme.palette.dark_secondary};
           }
           &:disabled {
-              background-color: ${props.theme.palette.light_grey};
+              background-color: ${props.theme.palette.light_secondary};
           }
         `;
       case 'success':
@@ -152,12 +152,12 @@ export const StyledButton = styled.button<StyledProps>`
 
       default:
         return `
-          background-color: ${props.theme.primary};
+          background-color: ${props.theme.grey};
           &:hover {
-              background-color: ${props.theme.dark_primary};
+              background-color: ${props.theme.dark_grey};
           }
           &:disabled {
-              background-color: ${props.theme.light_primary};
+              background-color: ${props.theme.light_grey};
           }
         `;
     }
